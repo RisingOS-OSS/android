@@ -110,12 +110,12 @@
     <linkfile dest="Android.bp" src="root.bp" />
     <linkfile dest="bootstrap.bash" src="bootstrap.bash" />
   </project>
-  
+
   <project path="build/release" name="android_build_release" groups="pdk,tradefed" remote="staging" />
 
   <!-- Device  -->
   <project path="device/lineage/sepolicy" name="android_device_lineage_sepolicy" remote="staging" />
-  
+
   <!-- External -->
   <project path="external/FadingEdgeLayout" name="android_external_FadingEdgeLayout" remote="staging" />
   <project path="external/tigervnc" name="android_external_tigervnc" groups="pdk" remote="staging" />
@@ -153,12 +153,12 @@
   <!-- AOSP Packages  -->
   <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" groups="pdk-fs,sysui-studio" remote="staging" />
   <project path="packages/apps/Settings" name="android_packages_apps_Settings" groups="pdk-fs" remote="staging" />
-  
+
   <!-- AOSP Modules  -->
   <project path="packages/modules/Bluetooth" name="android_packages_modules_Bluetooth" groups="pdk" remote="staging" />
   <project path="packages/modules/Connectivity" name="android_packages_modules_Connectivity_new" groups="pdk-cw-fs,pdk-fs" remote="staging" />
   <project path="packages/modules/Wifi" name="android_packages_modules_Wifi" groups="pdk" remote="staging" />
-  
+
   <!-- AOSP Services -->
   <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="staging" />
 
@@ -174,7 +174,7 @@
   <project path="vendor/gms" name="android_vendor_gms" remote="gitlab" />
   <project path="vendor/lineage" name="android_vendor_lineage" remote="staging" />
   <project path="vendor/rising" name="android_vendor_rising" groups="pdk-fs" remote="staging" />
-  <project path="vendor/risingOTA" name="android_vendor_RisingOTA" remote="devices" />
+  <project path="vendor/official_devices" name="official_devices" remote="devices" />
   <project path="vendor/pixel-framework" name="android_vendor_pixel-framework" remote="staging" />
   <project path="vendor/pixeloverlays" name="android_vendor_pixeloverlays" remote="staging" />
 </manifest>
