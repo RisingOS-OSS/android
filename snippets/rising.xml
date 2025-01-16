@@ -29,6 +29,10 @@
           fetch="https://github.com/RisingTechOSS-devices/"
           revision="fifteen" />
 
+  <remote name="devices-gitlab"
+          fetch="https://gitlab.com/RisingTechOSS-devices/"
+          revision="fifteen" />
+
   <!-- RisingOS Overrides -->
   <!-- Android Manifest  -->
   <remove-project path="android" />
