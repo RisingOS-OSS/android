@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote name="staging"
-          fetch="https://github.com/RisingOS-staging/"
-          sync-c="true"
-          sync-j="4"
-          revision="refs/heads/fifteen" />
-
   <remote name="rising"
-          fetch="https://github.com/RisingTechOSS/"
+          fetch="https://github.com/RisingOS-OSS/"
           sync-c="true"
           sync-j="4"
           revision="refs/heads/fifteen" />
 
   <remote name="gitlab"
-          fetch="https://gitlab.com/RisingTechOSS/"
+          fetch="https://gitlab.com/kibria5/"
           sync-c="true"
           sync-j="4"
           revision="refs/heads/fifteen" />
@@ -24,14 +18,6 @@
            sync-c="true"
            sync-j="4"
            revision="refs/heads/15.0" />
-
-  <remote name="devices"
-          fetch="https://github.com/RisingTechOSS-devices/"
-          revision="fifteen" />
-
-  <remote name="devices-gitlab"
-          fetch="https://gitlab.com/RisingTechOSS-devices/"
-          revision="fifteen" />
 
   <!-- RisingOS Overrides -->
   <!-- Android Manifest  -->
@@ -85,21 +71,21 @@
   <!-- RisingOS Overrides -->
 
   <!-- Android Manifest  -->
-  <project path="android" name="android" remote="staging" />
-  <project path="risingOS_changelogs" name="risingOS_changelogs" remote="staging" />
-  <project path="risingOS_wiki" name="risingOS_wiki" remote="staging" />
+  <project path="android" name="android" remote="rising" />
+  <project path="risingOS_changelogs" name="risingOS_changelogs" remote="rising" />
+  <project path="risingOS_wiki" name="risingOS_wiki" remote="rising" />
 
   <!-- Art  -->
-  <project path="art" name="android_art" groups="pdk" remote="staging" />
+  <project path="art" name="android_art" groups="pdk" remote="rising" />
 
   <!-- Bionic  -->
-  <project path="bionic" name="android_bionic" groups="pdk" remote="staging" />
+  <project path="bionic" name="android_bionic" groups="pdk" remote="rising" />
 
   <!-- Bootable  -->
-  <project path="bootable/recovery" name="android_bootable_recovery" groups="pdk" remote="staging" />
+  <project path="bootable/recovery" name="android_bootable_recovery" groups="pdk" remote="rising" />
 
   <!-- Build  -->
-  <project path="build/make" name="android_build" groups="pdk,sysui-studio" remote="staging" >
+  <project path="build/make" name="android_build" groups="pdk,sysui-studio" remote="rising" >
     <linkfile dest="build/CleanSpec.mk" src="CleanSpec.mk" />
     <linkfile dest="build/buildspec.mk.default" src="buildspec.mk.default" />
     <linkfile dest="build/core" src="core" />
@@ -108,73 +94,73 @@
     <linkfile dest="build/tools" src="tools" />
   </project>
 
-  <project path="build/soong" name="android_build_soong" groups="pdk,tradefed" remote="staging" >
+  <project path="build/soong" name="android_build_soong" groups="pdk,tradefed" remote="rising" >
     <linkfile dest="Android.bp" src="root.bp" />
     <linkfile dest="bootstrap.bash" src="bootstrap.bash" />
   </project>
 
-  <project path="build/release" name="android_build_release" groups="pdk,tradefed" remote="staging" />
+  <project path="build/release" name="android_build_release" groups="pdk,tradefed" remote="rising" />
 
   <!-- Device  -->
-  <project path="device/lineage/sepolicy" name="android_device_lineage_sepolicy" remote="staging" />
+  <project path="device/lineage/sepolicy" name="android_device_lineage_sepolicy" remote="rising" />
 
   <!-- External -->
-  <project path="external/FadingEdgeLayout" name="android_external_FadingEdgeLayout" remote="staging" />
-  <project path="external/tigervnc" name="android_external_tigervnc" groups="pdk" remote="staging" />
+  <project path="external/FadingEdgeLayout" name="android_external_FadingEdgeLayout" remote="rising" />
+  <project path="external/tigervnc" name="android_external_tigervnc" groups="pdk" remote="rising" />
 
   <!-- Frameworks  -->
-  <project path="frameworks/av" name="android_frameworks_av" groups="pdk-cw-fs,pdk-fs" remote="staging" />
-  <project path="frameworks/base" name="android_frameworks_base_new" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="staging" />
-  <project path="frameworks/libs/systemui" name="android_frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="staging" />
-  <project path="frameworks/native" name="android_frameworks_native" groups="pdk-cw-fs,pdk-fs" remote="staging" />
-  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" groups="pdk" remote="staging" />
+  <project path="frameworks/av" name="android_frameworks_av" groups="pdk-cw-fs,pdk-fs" remote="rising" />
+  <project path="frameworks/base" name="android_frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="rising" />
+  <project path="frameworks/libs/systemui" name="android_frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="rising" />
+  <project path="frameworks/native" name="android_frameworks_native" groups="pdk-cw-fs,pdk-fs" remote="rising" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" groups="pdk" remote="rising" />
 
   <!-- Hardware  -->
-  <project path="hardware/google/graphics/common" name="android_hardware_google_graphics_common" groups="pdk-lassen,pdk-gs-arm" remote="staging" />
-  <project path="hardware/interfaces" name="android_hardware_interfaces" groups="pdk,sysui-studio" remote="staging" />
+  <project path="hardware/google/graphics/common" name="android_hardware_google_graphics_common" groups="pdk-lassen,pdk-gs-arm" remote="rising" />
+  <project path="hardware/interfaces" name="android_hardware_interfaces" groups="pdk,sysui-studio" remote="rising" />
 
   <!-- Lineage SDK  -->
-  <project path="lineage-sdk" name="android_lineage-sdk" remote="staging" />
+  <project path="lineage-sdk" name="android_lineage-sdk" remote="rising" />
 
   <!-- Non-AOSP Packages  -->
-  <project path="packages/apps/Backgrounds" name="android_packages_apps_Backgrounds" remote="staging" />
+  <project path="packages/apps/Backgrounds" name="android_packages_apps_Backgrounds" remote="rising" />
   <project path="packages/apps/FaceUnlock" name="android_packages_apps_FaceUnlock" remote="crdroid-gitlab" />
-  <project path="packages/apps/Personalizations" name="android_packages_apps_Personalizations" groups="pdk-fs" remote="staging" />
-  <project path="packages/apps/VendorSupport" name="android_packages_apps_VendorSupport" groups="pdk-fs" remote="staging" />
-  <project path="packages/apps/DesktopMode" name="android_packages_apps_DesktopMode" remote="staging" />
-  <project path="packages/apps/GameSpace" name="android_packages_apps_GameSpace" remote="staging" />
-  <project path="packages/apps/LineageParts" name="android_packages_apps_LineageParts" remote="staging" />
-  <project path="packages/apps/LMOFreeform" name="android_packages_apps_LMOFreeform" remote="staging" />
-  <project path="packages/apps/OmniStyle" name="android_packages_apps_OmniStyle" remote="staging" />
-  <project path="packages/apps/SetupWizard" name="android_packages_apps_SetupWizard" remote="staging" />
-  <project path="packages/apps/Updater" name="android_packages_apps_Updater" remote="staging" />
-  <project path="packages/services/OmniJaws" name="android_packages_services_OmniJaws" remote="staging" />
-  <project path="packages/services/VncFlinger" name="android_packages_services_VncFlinger" remote="staging" />
+  <project path="packages/apps/Personalizations" name="android_packages_apps_Personalizations" groups="pdk-fs" remote="rising" />
+  <project path="packages/apps/VendorSupport" name="android_packages_apps_VendorSupport" groups="pdk-fs" remote="rising" />
+  <project path="packages/apps/DesktopMode" name="android_packages_apps_DesktopMode" remote="rising" />
+  <project path="packages/apps/GameSpace" name="android_packages_apps_GameSpace" remote="rising" />
+  <project path="packages/apps/LineageParts" name="android_packages_apps_LineageParts" remote="rising" />
+  <project path="packages/apps/LMOFreeform" name="android_packages_apps_LMOFreeform" remote="rising" />
+  <project path="packages/apps/OmniStyle" name="android_packages_apps_OmniStyle" remote="rising" />
+  <project path="packages/apps/SetupWizard" name="android_packages_apps_SetupWizard" remote="rising" />
+  <project path="packages/apps/Updater" name="android_packages_apps_Updater" remote="rising" />
+  <project path="packages/services/OmniJaws" name="android_packages_services_OmniJaws" remote="rising" />
+  <project path="packages/services/VncFlinger" name="android_packages_services_VncFlinger" remote="rising" />
 
   <!-- AOSP Packages  -->
-  <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" groups="pdk-fs,sysui-studio" remote="staging" />
-  <project path="packages/apps/Settings" name="android_packages_apps_Settings" groups="pdk-fs" remote="staging" />
+  <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" groups="pdk-fs,sysui-studio" remote="rising" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" groups="pdk-fs" remote="rising" />
 
   <!-- AOSP Modules  -->
-  <project path="packages/modules/Bluetooth" name="android_packages_modules_Bluetooth" groups="pdk" remote="staging" />
-  <project path="packages/modules/Wifi" name="android_packages_modules_Wifi" groups="pdk" remote="staging" />
+  <project path="packages/modules/Bluetooth" name="android_packages_modules_Bluetooth" groups="pdk" remote="rising" />
+  <project path="packages/modules/Wifi" name="android_packages_modules_Wifi" groups="pdk" remote="rising" />
 
   <!-- AOSP Services -->
-  <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="staging" />
+  <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="rising" />
 
   <!-- System  -->
-  <project path="system/core" name="android_system_core_new" groups="pdk" remote="staging" />
-  <project path="system/libhidl" name="android_system_libhidl" groups="pdk,sysui-studio" remote="staging" />
-  <project path="system/memory/lmkd" name="android_system_memory_lmkd" groups="pdk" remote="staging" />
-  <project path="system/sepolicy" name="android_system_sepolicy" groups="pdk" remote="staging" />
-  <project path="system/update_engine" name="android_system_update_engine" groups="pdk" remote="staging" />
+  <project path="system/core" name="android_system_core" groups="pdk" remote="rising" />
+  <project path="system/libhidl" name="android_system_libhidl" groups="pdk,sysui-studio" remote="rising" />
+  <project path="system/memory/lmkd" name="android_system_memory_lmkd" groups="pdk" remote="rising" />
+  <project path="system/sepolicy" name="android_system_sepolicy" groups="pdk" remote="rising" />
+  <project path="system/update_engine" name="android_system_update_engine" groups="pdk" remote="rising" />
 
   <!-- Vendor  -->
-  <project path="vendor/addons" name="android_vendor_addons" remote="staging" />
+  <project path="vendor/addons" name="android_vendor_addons" remote="rising" />
   <project path="vendor/gms" name="android_vendor_gms" remote="gitlab" />
-  <project path="vendor/lineage" name="android_vendor_lineage" remote="staging" />
-  <project path="vendor/rising" name="android_vendor_rising" groups="pdk-fs" remote="staging" />
-  <project path="vendor/official_devices" name="official_devices" remote="devices" />
-  <project path="vendor/pixel-framework" name="android_vendor_pixel-framework" remote="staging" />
-  <project path="vendor/pixeloverlays" name="android_vendor_pixeloverlays" remote="staging" />
+  <project path="vendor/lineage" name="android_vendor_lineage" remote="rising" />
+  <project path="vendor/rising" name="android_vendor_rising" groups="pdk-fs" remote="rising" />
+  <project path="vendor/official_devices" name="official_devices" remote="rising" />
+  <project path="vendor/pixel-framework" name="android_vendor_pixel-framework" remote="rising" />
+  <project path="vendor/pixeloverlays" name="android_vendor_pixeloverlays" remote="rising" />
 </manifest>
